@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_RECOGNIZERSHAREDSTATE_INL_HPP
+#define ANTLR3_RECOGNIZERSHAREDSTATE_INL_HPP
+
+#include "antlr3recognizersharedstate.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits, class StreamType>
 RecognizerSharedState<ImplTraits, StreamType>::RecognizerSharedState()
@@ -264,4 +270,8 @@ ANTLR_INLINE void RecognizerSharedState<ImplTraits, StreamType>::dec_backtrackin
 	--m_backtracking;
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_RECOGNIZERSHAREDSTATE_INL_HPP
+

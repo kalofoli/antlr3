@@ -51,7 +51,7 @@
 ///
 /// TODO: add mechanism to detect/puke on modification after reading from stream
 ///
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 template<class ImplTraits, class SuperType>
 class RewriteRuleElementStream  : public ImplTraits::AllocPolicyType
@@ -247,7 +247,7 @@ private:
 	TreeType*	toTreeNode(TreeType* element);
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #include "antlr3rewritestreams-inl.hpp"
 

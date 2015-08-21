@@ -62,7 +62,7 @@
  */
 #include    "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 static const ANTLR_UINT32	ANTLR_STRING_TERMINATOR	= 0xFFFFFFFF;
 
@@ -177,10 +177,10 @@ public:
 	 */
     void	popCharStream();
 
-    /** Function that emits (a copy of ) the supplied token as the next token in
+    /** Pointer to a function that emits the supplied token as the next token in
      *  the stream.
      */
-    void	emit(const CommonTokenType* token);
+    void	emitNew(const CommonTokenType& token);
 
     /** Pointer to a function that constructs a new token from the lexer stored information
      */
@@ -241,7 +241,7 @@ public:
 	~Lexer();
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #include "antlr3lexer-inl.hpp"
 

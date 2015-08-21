@@ -63,7 +63,7 @@
 
 #include    "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 enum STREAM_TYPE
 {
@@ -396,7 +396,7 @@ public:
 	ANTLR_UINT32		size();
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #include "antlr3intstream-inl.hpp"
 

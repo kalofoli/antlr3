@@ -35,7 +35,7 @@
 
 #include    "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 template<class ImplTraits>
 class CommonTreeAdaptor : public ImplTraits::AllocPolicyType
@@ -45,7 +45,7 @@ public:
 	typedef typename ImplTraits::TreeType TreeType;
 	typedef	TreeType TokenType;
 	typedef typename ImplTraits::CommonTokenType CommonTokenType;
-	typedef typename ImplTraits::DebugEventListenerType DebuggerType;
+	typedef typename ImplTraits::DebugEventListener DebuggerType;
 
 public:
 	//The parameter is there only to provide uniform constructor interface
@@ -156,7 +156,7 @@ public:
 };
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #include "antlr3commontreeadaptor-inl.hpp"
 

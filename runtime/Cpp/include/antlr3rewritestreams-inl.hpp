@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_REWRITESTREAMS_INL_HPP
+#define ANTLR3_REWRITESTREAMS_INL_HPP
+
+#include "antlr3rewritestreams.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits, class SuperType>
 RewriteRuleElementStream<ImplTraits, SuperType>::RewriteRuleElementStream(TreeAdaptorType* adaptor, 
@@ -371,4 +377,8 @@ RewriteRuleElementStream<ImplTraits, SuperType>::~RewriteRuleElementStream()
 	}
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_REWRITESTREAMS_INL_HPP
+

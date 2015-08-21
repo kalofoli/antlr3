@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_PARSER_INL_HPP
+#define ANTLR3_PARSER_INL_HPP
+
+#include "antlr3parser.hpp"
+
+
+namespace antlr3 {
 
 template< class ImplTraits >
 Parser<ImplTraits>::Parser( ANTLR_UINT32 sizeHint, RecognizerSharedStateType* state )
@@ -582,4 +588,8 @@ RuleReturnValue_1<ImplTraits>::~RuleReturnValue_1()
 	}
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_PARSER_INL_HPP
+

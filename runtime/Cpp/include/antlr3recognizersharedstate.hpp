@@ -44,7 +44,7 @@
 
 #include "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 /** All the data elements required to track the current state
  *  of any recognizer (lexer, parser, tree parser).
@@ -256,7 +256,7 @@ public:
 	void dec_backtracking();
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #include "antlr3recognizersharedstate-inl.hpp"
 

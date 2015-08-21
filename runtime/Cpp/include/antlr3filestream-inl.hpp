@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_FILESTREAM_INL_HPP
+#define ANTLR3_FILESTREAM_INL_HPP
+
+#include "antlr3filestream.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 ANTLR_FDSC	FileUtils<ImplTraits>::AntlrFopen(const ANTLR_UINT8* filename, const char * mode)
@@ -71,4 +77,8 @@ ANTLR_UINT32	FileUtils<ImplTraits>::AntlrRead8Bit(InputStreamType* input, const 
 	return  ANTLR_SUCCESS;
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_FILESTREAM_INL_HPP
+

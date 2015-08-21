@@ -45,7 +45,7 @@
 
 #include    "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 /// Default debugging port
 ///
@@ -394,7 +394,7 @@ public:
 	virtual ~DebugEventListener();
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #endif
 

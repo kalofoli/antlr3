@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_COMMONTREE_INL_HPP
+#define ANTLR3_COMMONTREE_INL_HPP
+
+#include "antlr3commontree.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 CommonTree<ImplTraits>::CommonTree()
@@ -562,4 +568,8 @@ CommonTree<ImplTraits>::~CommonTree()
 {
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_COMMONTREE_INL_HPP
+

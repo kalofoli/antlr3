@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_TREEPARSER_INL_HPP
+#define ANTLR3_TREEPARSER_INL_HPP
+
+#include "antlr3treeparser.hpp"
+
+
+namespace antlr3 {
 
 template< class ImplTraits >
 TreeParser<ImplTraits>::TreeParser( ANTLR_UINT32 sizeHint, TreeNodeStreamType* ctnstream,
@@ -195,4 +201,8 @@ TreeParser<ImplTraits>::getMissingSymbol( IntStreamType* istream, ExceptionBaseT
 }
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_TREEPARSER_INL_HPP
+

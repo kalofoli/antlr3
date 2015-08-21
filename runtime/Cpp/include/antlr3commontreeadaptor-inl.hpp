@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_COMMONTREEADAPTOR_INL_HPP
+#define ANTLR3_COMMONTREEADAPTOR_INL_HPP
+
+#include "antlr3commontreeadaptor.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 ANTLR_INLINE CommonTreeAdaptor<ImplTraits>::CommonTreeAdaptor(DebuggerType*)
@@ -798,4 +804,8 @@ void DebugTreeAdaptor<ImplTraits>::simulateTreeConstruction(TreeType* tree)
 }
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_COMMONTREEADAPTOR_INL_HPP
+

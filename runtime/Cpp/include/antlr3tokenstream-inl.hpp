@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_TOKENSTREAM_INL_HPP
+#define ANTLR3_TOKENSTREAM_INL_HPP
+
+#include "antlr3tokenstream.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 TokenSource<ImplTraits>::TokenSource()
@@ -934,4 +940,8 @@ CommonTokenStream<ImplTraits>::~CommonTokenStream()
 	m_tokens.clear();
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_TOKENSTREAM_INL_HPP
+

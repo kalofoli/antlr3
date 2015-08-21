@@ -4,7 +4,7 @@
 #include	"antlr3defs.hpp"
 
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 	
 //Users implementing overrides should inherit from this
 template<class ImplTraits>
@@ -135,7 +135,8 @@ class TraitsBase
 public:
 	typedef TraitsBase  TraitsType;
 	
-	typedef typename TraitsSelector< typename UserTraits<TraitsType>::AllocPolicyType, DefaultAllocPolicy >::selected  AllocPolicyType;
+	typedef typename TraitsSelector< typename UserTraits<TraitsType>::AllocPolicyType, 
+									DefaultAllocPolicy >::selected  AllocPolicyType;
 
 	typedef typename TraitsSelector< typename UserTraits<TraitsType>::StringType, 
 									std::string >::selected StringType;
@@ -315,6 +316,6 @@ public:
 };
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #endif //_ANTLR3_TRAITS_HPP

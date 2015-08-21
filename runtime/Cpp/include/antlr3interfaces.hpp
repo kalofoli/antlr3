@@ -34,7 +34,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 // THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 template<class ImplTraits, class SuperType>
 class IntStream;
@@ -296,6 +296,6 @@ public:
 };
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #endif

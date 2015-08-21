@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_CYCLICDFA_INL_HPP
+#define ANTLR3_CYCLICDFA_INL_HPP
+
+#include "antlr3cyclicdfa.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits, class CtxType>
 CyclicDFA<ImplTraits, CtxType>::CyclicDFA( ANTLR_INT32	decisionNumber
@@ -201,4 +207,8 @@ void CyclicDFA<ImplTraits, CtxType>::noViableAlt(RecognizerType* rec, ANTLR_UINT
 	}
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_CYCLICDFA_INL_HPP
+

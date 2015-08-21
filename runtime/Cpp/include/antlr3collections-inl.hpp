@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_COLLECTIONS_INL_HPP
+#define ANTLR3_COLLECTIONS_INL_HPP
+
+#include "antlr3collections.hpp"
+
+
+namespace antlr3 {
 
 template< class ImplTraits, class DataType >
 ANTLR_INLINE TrieEntry<ImplTraits, DataType>::TrieEntry(const DataType& data, TrieEntry* next)
@@ -992,4 +998,8 @@ Topo<ImplTraits>::~Topo()
 }
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_COLLECTIONS_INL_HPP
+

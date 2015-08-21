@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_BITSET_INL_HPP
+#define ANTLR3_BITSET_INL_HPP
+
+#include "antlr3bitset.hpp"
+
+
+namespace antlr3 {
 
 template <class ImplTraits>
 ANTLR_INLINE BitsetList<ImplTraits>::BitsetList()
@@ -105,8 +111,9 @@ Bitset<ImplTraits>::Bitset( ANTLR_UINT32 numBits )
 	//
 	ANTLR_UINT32 numelements	= ((numBits -1) >> ANTLR_BITSET_LOG_BITS) + 1;
 
-	m_blist.set_bits( (ANTLR_BITWORD*) AllocPolicyType::alloc0(numelements * sizeof(ANTLR_BITWORD)));
+	m_blist.set_bits( (ANTLR_BITWORD*) AllocPolicyType::alloc(numelements * sizeof(ANTLR_BITWORD)));
 
+	memset( m_blist.get_bits(), 0, (numelements * sizeof(ANTLR_BITWORD)));
 	m_blist.set_length( numelements );
 }
 
@@ -489,4 +496,8 @@ Bitset<ImplTraits>* Bitset<ImplTraits>::BitsetFromList(const IntListType& list)
 	return bitset;
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_BITSET_INL_HPP
+

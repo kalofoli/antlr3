@@ -95,9 +95,6 @@
 ///
 #define ANTLR_ENC_EBCDIC       64
 
-#define ANTLR_BEGIN_NAMESPACE() namespace antlr3 {
-#define ANTLR_END_NAMESPACE() }
-
 #define ANTLR_USE_64BIT
 
 /* Common definitions come first

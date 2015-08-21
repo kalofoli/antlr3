@@ -1,9 +1,14 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_EXCEPTION_INL_HPP
+#define ANTLR3_EXCEPTION_INL_HPP
+
+#include "antlr3exception.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits, class StreamType>
 ANTLR_ExceptionBase<ImplTraits, StreamType>::ANTLR_ExceptionBase(const StringType& message)
 	:m_message(message)
-	,m_input(NULL)
 {
 	m_index = 0;
 	m_token	= NULL;
@@ -376,4 +381,8 @@ ANTLR_ExceptionBase<ImplTraits,StreamType>::~ANTLR_ExceptionBase()
     }
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_EXCEPTION_INL_HPP
+

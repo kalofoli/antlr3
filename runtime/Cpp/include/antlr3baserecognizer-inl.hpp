@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_BASERECOGNIZER_INL_HPP
+#define ANTLR3_BASERECOGNIZER_INL_HPP
+
+#include "antlr3baserecognizer.hpp"
+
+
+namespace antlr3 {
 
 template< class ImplTraits, class StreamType >
 BaseRecognizer<ImplTraits, StreamType>::BaseRecognizer(ANTLR_UINT32 sizeHint,
@@ -916,4 +922,8 @@ BaseRecognizer<ImplTraits, StreamType>::~BaseRecognizer()
 
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_BASERECOGNIZER_INL_HPP
+

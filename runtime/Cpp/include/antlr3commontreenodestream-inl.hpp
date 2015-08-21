@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_COMMONTREENODESTREAM_INL_HPP
+#define ANTLR3_COMMONTREENODESTREAM_INL_HPP
+
+#include "antlr3commontreenodestream.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 CommonTreeNodeStream<ImplTraits>::CommonTreeNodeStream(ANTLR_UINT32 hint)
@@ -418,5 +424,9 @@ void CommonTreeNodeStream<ImplTraits>::fillBuffer(TreeType* t)
 
 
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+
+#endif // ANTLR3_COMMONTREENODESTREAM_INL_HPP
 

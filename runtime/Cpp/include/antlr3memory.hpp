@@ -39,7 +39,7 @@
 
 #include   "antlr3defs.hpp"
 
-ANTLR_BEGIN_NAMESPACE()
+namespace antlr3 {
 
 class DefaultAllocPolicy
 {
@@ -110,29 +110,29 @@ public:
 	{
 	};
 
-	ANTLR_INLINE static void* operator new (std::size_t bytes)
+	static void* operator new (std::size_t bytes) 
 	{ 
 		void* p = alloc(bytes);
 		return p;
 	}
-	ANTLR_INLINE static void* operator new (std::size_t , void* p) { return p; }
-	ANTLR_INLINE static void* operator new[]( std::size_t bytes)
+	static void* operator new (std::size_t , void* p) { return p; }
+	static void* operator new[]( std::size_t bytes)
 	{
 		void* p = alloc(bytes); 
 		return p;
 	}
-	ANTLR_INLINE static void operator delete(void* p)
+	static void operator delete(void* p)
 	{
 		DefaultAllocPolicy::free(p);
 	}
-	ANTLR_INLINE static void operator delete(void* , void* ) {} //placement delete
+	static void operator delete(void* , void* ) {} //placement delete
 
-	ANTLR_INLINE static void operator delete[](void* p)
+	static void operator delete[](void* p)
 	{
 		DefaultAllocPolicy::free(p);
 	}
 
-	ANTLR_INLINE static void* alloc( std::size_t bytes )
+	static void* alloc( std::size_t bytes )
 	{
 		void* p = malloc(bytes); 
 		if( p== NULL )
@@ -140,25 +140,24 @@ public:
 		return p;
 	}
 
-	ANTLR_INLINE static void* alloc0( std::size_t bytes )
+	static void* alloc0( std::size_t bytes )
 	{
-		void* p = calloc(1, bytes);
-		if( p== NULL )
-			throw std::bad_alloc();
+		void* p = DefaultAllocPolicy::alloc(bytes); 
+		memset(p, 0, bytes );
 		return p;
 	}
 
-	ANTLR_INLINE static void  free( void* p )
+	static void  free( void* p )
 	{
 		return ::free(p);
 	}
 	
-	ANTLR_INLINE static void* realloc(void *ptr, size_t size)
+	static void* realloc(void *ptr, size_t size)
 	{
 		return ::realloc( ptr, size );
 	}
 };
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
 
 #endif	/* _ANTLR3MEMORY_H */

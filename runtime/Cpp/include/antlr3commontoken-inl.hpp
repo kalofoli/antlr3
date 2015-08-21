@@ -1,4 +1,10 @@
-ANTLR_BEGIN_NAMESPACE()
+#ifndef ANTLR3_COMMONTOKEN_INL_HPP
+#define ANTLR3_COMMONTOKEN_INL_HPP
+
+#include "antlr3commontoken.hpp"
+
+
+namespace antlr3 {
 
 template<class ImplTraits>
 CommonToken<ImplTraits>::CommonToken()
@@ -319,4 +325,8 @@ typename CommonToken<ImplTraits>::StringType  CommonToken<ImplTraits>::toString(
     return  outtext.str();
 }
 
-ANTLR_END_NAMESPACE()
+} // namespace antlr3
+
+
+#endif // ANTLR3_COMMONTOKEN_INL_HPP
+
