@@ -158,6 +158,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3commontreeadaptor.inl"
+#include "antlr3commontreeadaptor-inl.hpp"
 
 #endif

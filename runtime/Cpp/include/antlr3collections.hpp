@@ -278,7 +278,7 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3collections.inl"
+#include "antlr3collections-inl.hpp"
     
 #endif
 

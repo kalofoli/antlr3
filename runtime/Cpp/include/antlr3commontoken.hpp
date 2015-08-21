@@ -245,6 +245,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3commontoken.inl"
+#include "antlr3commontoken-inl.hpp"
 
 #endif

@@ -195,6 +195,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3parser.inl"
+#include "antlr3parser-inl.hpp"
 
 #endif

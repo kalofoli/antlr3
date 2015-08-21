@@ -503,7 +503,7 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3baserecognizer.inl"
+#include "antlr3baserecognizer-inl.hpp"
 
 /// @}
 ///

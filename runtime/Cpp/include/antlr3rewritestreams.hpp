@@ -249,6 +249,6 @@ private:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3rewritestreams.inl"
+#include "antlr3rewritestreams-inl.hpp"
 
 #endif

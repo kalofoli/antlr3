@@ -204,6 +204,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3exception.inl"
+#include "antlr3exception-inl.hpp"
 
 #endif

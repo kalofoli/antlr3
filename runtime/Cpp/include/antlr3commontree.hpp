@@ -132,7 +132,7 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3commontree.inl"
+#include "antlr3commontree-inl.hpp"
 
 #endif
 

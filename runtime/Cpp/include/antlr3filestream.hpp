@@ -70,6 +70,6 @@ class ParseFileAbsentException : public std::exception
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3filestream.inl"
+#include "antlr3filestream-inl.hpp"
 
 #endif

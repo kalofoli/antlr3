@@ -218,7 +218,7 @@ private:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3bitset.inl"
+#include "antlr3bitset-inl.hpp"
 
 #endif
 

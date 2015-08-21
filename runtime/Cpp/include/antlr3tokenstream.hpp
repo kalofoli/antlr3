@@ -403,6 +403,6 @@ class TokenAccessException : public std::exception
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3tokenstream.inl"
+#include "antlr3tokenstream-inl.hpp"
 
 #endif

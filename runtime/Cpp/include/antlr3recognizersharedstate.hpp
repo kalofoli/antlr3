@@ -258,7 +258,7 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3recognizersharedstate.inl"
+#include "antlr3recognizersharedstate-inl.hpp"
 
 #endif
 

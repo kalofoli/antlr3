@@ -398,7 +398,7 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3intstream.inl"
+#include "antlr3intstream-inl.hpp"
 
 #endif
 

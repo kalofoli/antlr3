@@ -312,6 +312,6 @@ private:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3commontreenodestream.inl"
+#include "antlr3commontreenodestream-inl.hpp"
 
 #endif

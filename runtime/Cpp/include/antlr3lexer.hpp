@@ -243,6 +243,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3lexer.inl"
+#include "antlr3lexer-inl.hpp"
 
 #endif

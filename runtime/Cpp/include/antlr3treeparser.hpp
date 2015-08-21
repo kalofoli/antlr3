@@ -96,6 +96,6 @@ public:
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3treeparser.inl"
+#include "antlr3treeparser-inl.hpp"
 
 #endif

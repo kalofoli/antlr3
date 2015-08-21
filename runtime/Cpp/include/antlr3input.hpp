@@ -322,6 +322,6 @@ class ParseNullStringException : public std::exception
 
 ANTLR_END_NAMESPACE()
 
-#include "antlr3input.inl"
+#include "antlr3input-inl.hpp"
 
 #endif	/* _ANTLR_INPUT_H  */

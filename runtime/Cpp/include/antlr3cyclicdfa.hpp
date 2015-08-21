@@ -103,6 +103,6 @@ ANTLR_END_NAMESPACE()
 #pragma warning	(pop)
 #endif
 
-#include "antlr3cyclicdfa.inl"
+#include "antlr3cyclicdfa-inl.hpp"
 
 #endif
