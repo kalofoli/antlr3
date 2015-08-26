@@ -284,7 +284,7 @@ headerFile( LEXER,
 /* =============================================================================
  * Standard antlr3 C++ runtime definitions
  */
-#include \<antlr3.hpp>
+#include \<antlr3/antlr3.hpp>
 
 /* End of standard antlr 3 runtime definitions
  * =============================================================================
@@ -360,6 +360,15 @@ public:
 	};
 
 };
+
+/** Return the table of token names used by this parser.
+ *
+ * The returned pointer is used as an index into the token names table (using the token
+ * number as the index).
+ *
+ * \return Pointer to first char * in the table.
+ */
+ ANTLR_UINT8**	getTokenNames();
 
 /** Context tracking structure for <mainName()>
  */
@@ -935,7 +944,7 @@ void
  *
  * \return Pointer to first char * in the table.
  */
-static ANTLR_UINT8**	getTokenNames()
+ANTLR_UINT8**	getTokenNames()
 {
         return <grammar.composite.rootGrammar.recognizerName>TokenNames;
 }
@@ -1007,7 +1016,7 @@ parser(	grammar,
 		bitsets,
 		ASTLabelType,
 		superClass="Parser",
-		labelType="const ImplTraits::CommonTokenType*",
+		labelType="ImplTraits::CommonTokenType*",
 		members={<actions.parser.members>}
 		) ::= <<
 <beginNamespace(actions)>
@@ -1260,7 +1269,7 @@ ruleInitializations() ::= <<
 ruleLabelDefs() ::= <<
 <[ruleDescriptor.tokenLabels,ruleDescriptor.tokenListLabels,
   ruleDescriptor.wildcardTreeLabels,ruleDescriptor.wildcardTreeListLabels]
-    :{it |<labelType> <it.label.text> = NULL;}; separator="\n"
+    :{it |const <labelType> <it.label.text> = NULL;}; separator="\n"
 >
 <[ruleDescriptor.tokenListLabels,ruleDescriptor.ruleListLabels,ruleDescriptor.wildcardTreeListLabels]
     :{it |ImplTraits::TokenPtrsListType list_<it.label.text>;}; separator="\n"
